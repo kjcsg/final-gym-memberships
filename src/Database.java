@@ -20,6 +20,7 @@ public class Database {
     }
 
     public String NamesString(String[] arr){ //Convert array of names to comma separated names list
+        arr = qs();
         String out = arr[0];
         for(String name : arr){
             out+=", "+name;
