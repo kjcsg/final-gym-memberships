@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args){
         buildDB(); //Build up the database
-        db.NamesString(); //Sort and print last names from db
+        db.namesString(); //Sort and print last names from db
         findMember(); //Find a certain member by member ID number
     }
 
@@ -33,18 +33,19 @@ public class Main {
                 Member member = new Member(id, fname, lname, age, jyear, charge); //Make each member object
                 db.add(member); //Add each member object
             }
+            scan.close();
         }
         catch(FileNotFoundException e) {
             System.out.println("No file found.");
         }
     }
 
-    private static void findMember() { //Sort last names and print out plain text, human readable string
-        Member member = db.find(1400);
-        System.out.println("Member ID: " + member.id);
+    private static void findMember() { //Find a member by ID number and print out their info
+        Member member = db.find(1400); //Find member by ID in the database
+        System.out.println("\nMember ID: " + member.id);
         System.out.println("Member Name: " + member.fname + " " + member.lname);
         System.out.println("Member Age: " + member.age);
         System.out.println("Member Join Year: " + member.jyear);
-        System.out.println("Member Dues: " + member.charge);
+        System.out.println("Member Dues: " + member.charge + "\n");
     }
 }
