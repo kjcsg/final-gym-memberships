@@ -1,0 +1,6 @@
+#IDNumber,FirstName,LastName,YearTheyJoined,Dues,Age
+2159,Jennifer,Conway,2014,39.99,32
+1685,Phillip,Morrison,2009,29.99,28
+1400,Abigail,Stevens,2007,29.99,45
+6851,Steven,Bronson,2016,44.99,21
+9001,Sharon,Cranston,2011,34.99,36
